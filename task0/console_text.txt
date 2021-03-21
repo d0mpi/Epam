@@ -1,0 +1,165 @@
+
+B:\EPAM\task0>mkdir com\epam\jwd\app com\epam\jwd\model
+
+B:\EPAM\task0>dir /w
+ Volume in drive B is Study
+ Volume Serial Number is DC07-106C
+
+ Directory of B:\EPAM\task0
+
+[.]   [..]  [com] [lib]
+               0 File(s)              0 bytes
+               4 Dir(s)  481 053 900 800 bytes free
+
+B:\EPAM\task0>cd lib
+
+B:\EPAM\task0\lib>dir /w
+ Volume in drive B is Study
+ Volume Serial Number is DC07-106C
+
+ Directory of B:\EPAM\task0\lib
+
+[.]                     [..]                    log4j-api-2.14.1.jar    log4j-core-2.14.1.jar
+               2 File(s)      2 046 065 bytes
+               2 Dir(s)  481 053 900 800 bytes free
+
+B:\EPAM\task0\lib>cd..
+
+B:\EPAM\task0>cd com\epam\jwd\app
+
+B:\EPAM\task0\com\epam\jwd\app>dir /w
+ Volume in drive B is Study
+ Volume Serial Number is DC07-106C
+
+ Directory of B:\EPAM\task0\com\epam\jwd\app
+
+[.]         [..]        Main.java
+               1 File(s)            684 bytes
+               2 Dir(s)  481 053 900 800 bytes free
+
+B:\EPAM\task0\com\epam\jwd\app>cd..
+
+B:\EPAM\task0\com\epam\jwd>cd model
+
+B:\EPAM\task0\com\epam\jwd\model>dir /w
+ Volume in drive B is Study
+ Volume Serial Number is DC07-106C
+
+ Directory of B:\EPAM\task0\com\epam\jwd\model
+
+[.]            [..]           Student.java
+               1 File(s)          1 241 bytes
+               2 Dir(s)  481 053 900 800 bytes free
+
+B:\EPAM\task0>javac -d app com\epam\jwd\model\Student.java
+
+B:\EPAM\task0>javac -sourcepath . -d app -cp lib\* com\epam\jwd\app\Main.java
+
+B:\EPAM>md temp_task0
+
+B:\EPAM>cd temp_task0
+
+B:\EPAM\temp_task0>md lib
+
+B:\EPAM\temp_task0>md app
+
+B:\EPAM\temp_task0>cd lib
+
+B:\EPAM\temp_task0\lib>xcopy b:\EPAM\task0\lib
+B:\EPAM\task0\lib\log4j-api-2.14.1.jar
+B:\EPAM\task0\lib\log4j-core-2.14.1.jar
+2 File(s) copied
+
+B:\EPAM\temp_task0\lib>cd..
+
+B:\EPAM\temp_task0>cd app
+
+B:\EPAM\temp_task0\app>xcopy b:\EPAM\task0\app
+0 File(s) copied
+
+B:\EPAM\temp_task0\app>xcopy /e b:\EPAM\task0\app
+B:\EPAM\task0\app\com\epam\jwd\app\Main.class
+B:\EPAM\task0\app\com\epam\jwd\model\Student.class
+2 File(s) copied
+
+B:\EPAM\temp_task0\app>java -cp .;"B:\EPAM\temp_task0\lib\*" com.epam.jwd.app.Main
+2021-03-21 16:18:16,734 main DEBUG Apache Log4j Core 2.14.1 initializing configuration XmlConfiguration[location=B:\EPAM\temp_task0\app\log4j2.xml]
+2021-03-21 16:18:16,740 main DEBUG Installed 0 script engines
+2021-03-21 16:18:16,744 main DEBUG Took 0,002144 seconds to load 0 plugins from package org.apache.logging.log4j.test
+2021-03-21 16:18:16,744 main DEBUG PluginManager 'Core' found 122 plugins
+2021-03-21 16:18:16,744 main DEBUG PluginManager 'Level' found 0 plugins
+2021-03-21 16:18:16,747 main DEBUG PluginManager 'Lookup' found 16 plugins
+2021-03-21 16:18:16,749 main DEBUG Building Plugin[name=filter, class=org.apache.logging.log4j.core.filter.ThresholdFilter].
+2021-03-21 16:18:16,758 main DEBUG PluginManager 'TypeConverter' found 26 plugins
+2021-03-21 16:18:16,763 main DEBUG createFilter(level="TRACE", onMatch="null", onMismatch="null")
+2021-03-21 16:18:16,764 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2021-03-21 16:18:16,770 main DEBUG PatternLayout$Builder(pattern="%m %n", PatternSelector=null, Configuration(XMLConfigTest), Replace=null, charset="null", alwaysWriteExceptions="null", disableAnsi="null", noConsoleNoAnsi="null", header="null", footer="null")
+2021-03-21 16:18:16,770 main DEBUG PluginManager 'Converter' found 44 plugins
+2021-03-21 16:18:16,771 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.ConsoleAppender].
+2021-03-21 16:18:16,775 main DEBUG ConsoleAppender$Builder(target="null", follow="null", direct="null", bufferedIo="null", bufferSize="null", immediateFlush="null", ignoreExceptions="null", PatternLayout(%m %n), name="STDOUT", Configuration(XMLConfigTest), Filter=null, ={})
+2021-03-21 16:18:16,776 main DEBUG Starting OutputStreamManager SYSTEM_OUT.false.false
+2021-03-21 16:18:16,776 main DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2021-03-21 16:18:16,779 main DEBUG PatternLayout$Builder(pattern="%d %p %c{1.} [%t] %m%n", PatternSelector=null, Configuration(XMLConfigTest), Replace=null, charset="null", alwaysWriteExceptions="null", disableAnsi="null", noConsoleNoAnsi="null", header="null", footer="null")
+2021-03-21 16:18:16,791 main DEBUG Building Plugin[name=TimeBasedTriggeringPolicy, class=org.apache.logging.log4j.core.appender.rolling.TimeBasedTriggeringPolicy].
+2021-03-21 16:18:16,793 main DEBUG TimeBasedTriggeringPolicy$Builder(interval="1", modulate="null", maxRandomDelay="null")
+2021-03-21 16:18:16,794 main DEBUG Building Plugin[name=SizeBasedTriggeringPolicy, class=org.apache.logging.log4j.core.appender.rolling.SizeBasedTriggeringPolicy].
+2021-03-21 16:18:16,794 main DEBUG createPolicy(size="250 MB")
+2021-03-21 16:18:16,796 main DEBUG Building Plugin[name=Policies, class=org.apache.logging.log4j.core.appender.rolling.CompositeTriggeringPolicy].
+2021-03-21 16:18:16,796 main DEBUG createPolicy(={TimeBasedTriggeringPolicy(nextRolloverMillis=0, interval=1, modulate=false), SizeBasedTriggeringPolicy(size=262144000)})
+2021-03-21 16:18:16,797 main DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.RollingFileAppender].
+2021-03-21 16:18:16,799 main DEBUG RollingFileAppender$Builder(fileName="logs/log4j2.log", filePattern="logs/${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz", append="null", locking="null", Policies(CompositeTriggeringPolicy(policies=[TimeBasedTriggeringPolicy(nextRolloverMillis=0, interval=1, modulate=false), SizeBasedTriggeringPolicy(size=262144000)])), Strategy=null, advertise="null", advertiseUri="null", createOnDemand="null", filePermissions="null", fileOwner="null", fileGroup="null", bufferedIo="null", bufferSize="null", immediateFlush="null", ignoreExceptions="null", PatternLayout(%d %p %c{1.} [%t] %m%n), name="rollingFile", Configuration(XMLConfigTest), Filter=null, ={})
+2021-03-21 16:18:16,829 main DEBUG Returning file creation time for B:\EPAM\temp_task0\app\logs\log4j2.log
+2021-03-21 16:18:16,829 main DEBUG Starting RollingFileManager logs/log4j2.log
+2021-03-21 16:18:16,832 main DEBUG PluginManager 'FileConverter' found 2 plugins
+2021-03-21 16:18:16,834 main DEBUG Setting prev file time to 2021-03-21T16:18:16.827+0300
+2021-03-21 16:18:16,835 main DEBUG Initializing triggering policy CompositeTriggeringPolicy(policies=[TimeBasedTriggeringPolicy(nextRolloverMillis=0, interval=1, modulate=false), SizeBasedTriggeringPolicy(size=262144000)])
+2021-03-21 16:18:16,835 main DEBUG Initializing triggering policy TimeBasedTriggeringPolicy(nextRolloverMillis=0, interval=1, modulate=false)
+2021-03-21 16:18:16,836 main DEBUG Initializing triggering policy SizeBasedTriggeringPolicy(size=262144000)
+2021-03-21 16:18:16,836 main DEBUG Building Plugin[name=appenders, class=org.apache.logging.log4j.core.config.AppendersPlugin].
+2021-03-21 16:18:16,837 main DEBUG createAppenders(={STDOUT, rollingFile})
+2021-03-21 16:18:16,837 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2021-03-21 16:18:16,838 main DEBUG createAppenderRef(ref="STDOUT", level="null", Filter=null)
+2021-03-21 16:18:16,839 main DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2021-03-21 16:18:16,839 main DEBUG createAppenderRef(ref="rollingFile", level="null", Filter=null)
+2021-03-21 16:18:16,840 main DEBUG Building Plugin[name=root, class=org.apache.logging.log4j.core.config.LoggerConfig$RootLogger].
+2021-03-21 16:18:16,841 main DEBUG createLogger(additivity="null", level="INFO", includeLocation="null", ={STDOUT, rollingFile}, ={}, Configuration(XMLConfigTest), Filter=null)
+2021-03-21 16:18:16,843 main DEBUG Building Plugin[name=loggers, class=org.apache.logging.log4j.core.config.LoggersPlugin].
+2021-03-21 16:18:16,844 main DEBUG createLoggers(={root})
+2021-03-21 16:18:16,844 main DEBUG Configuration XmlConfiguration[location=B:\EPAM\temp_task0\app\log4j2.xml] initialized
+2021-03-21 16:18:16,844 main DEBUG Starting configuration XmlConfiguration[location=B:\EPAM\temp_task0\app\log4j2.xml]
+2021-03-21 16:18:16,844 main DEBUG Started configuration XmlConfiguration[location=B:\EPAM\temp_task0\app\log4j2.xml] OK.
+2021-03-21 16:18:16,845 main DEBUG Shutting down OutputStreamManager SYSTEM_OUT.false.false-1
+2021-03-21 16:18:16,845 main DEBUG OutputStream closed
+2021-03-21 16:18:16,845 main DEBUG Shut down OutputStreamManager SYSTEM_OUT.false.false-1, all resources released: true
+2021-03-21 16:18:16,846 main DEBUG Appender DefaultConsole-1 stopped with status true
+2021-03-21 16:18:16,847 main DEBUG Stopped org.apache.logging.log4j.core.config.DefaultConfiguration@735f7ae5 OK
+2021-03-21 16:18:16,889 main DEBUG Registering MBean org.apache.logging.log4j2:type=659e0bfd
+2021-03-21 16:18:16,892 main DEBUG Registering MBean org.apache.logging.log4j2:type=659e0bfd,component=StatusLogger
+2021-03-21 16:18:16,893 main DEBUG Registering MBean org.apache.logging.log4j2:type=659e0bfd,component=ContextSelector
+2021-03-21 16:18:16,894 main DEBUG Registering MBean org.apache.logging.log4j2:type=659e0bfd,component=Loggers,name=
+2021-03-21 16:18:16,895 main DEBUG Registering MBean org.apache.logging.log4j2:type=659e0bfd,component=Appenders,name=rollingFile
+2021-03-21 16:18:16,896 main DEBUG Registering MBean org.apache.logging.log4j2:type=659e0bfd,component=Appenders,name=STDOUT
+2021-03-21 16:18:16,898 main DEBUG org.apache.logging.log4j.core.util.SystemClock supports precise timestamps.
+2021-03-21 16:18:16,898 main DEBUG Reconfiguration complete for context[name=659e0bfd] at URI B:\EPAM\temp_task0\app\log4j2.xml (org.apache.logging.log4j.core.LoggerContext@4d5b6aac) with optional ClassLoader: null
+2021-03-21 16:18:16,898 main DEBUG Shutdown hook enabled. Registering a new one.
+2021-03-21 16:18:16,899 main DEBUG LoggerContext[name=659e0bfd, org.apache.logging.log4j.core.LoggerContext@4d5b6aac] started OK.
+Student: 123, name='Michael', university='BSU'
+Student: 54984, name='Nikita', university='BSUIR'
+Student: 268465, name='John', university='BNTU'
+2021-03-21 16:18:16,910 pool-1-thread-1 DEBUG Stopping LoggerContext[name=659e0bfd, org.apache.logging.log4j.core.LoggerContext@4d5b6aac]
+2021-03-21 16:18:16,910 pool-1-thread-1 DEBUG Stopping LoggerContext[name=659e0bfd, org.apache.logging.log4j.core.LoggerContext@4d5b6aac]...
+2021-03-21 16:18:16,913 pool-1-thread-1 DEBUG Shutting down OutputStreamManager SYSTEM_OUT.false.false
+2021-03-21 16:18:16,913 pool-1-thread-1 DEBUG OutputStream closed
+2021-03-21 16:18:16,913 pool-1-thread-1 DEBUG Shut down OutputStreamManager SYSTEM_OUT.false.false, all resources released: true
+2021-03-21 16:18:16,914 pool-1-thread-1 DEBUG Appender STDOUT stopped with status true
+2021-03-21 16:18:16,914 pool-1-thread-1 DEBUG Shutting down RollingFileManager logs/log4j2.log
+2021-03-21 16:18:16,915 pool-1-thread-1 DEBUG Shutting down RollingFileManager logs/log4j2.log
+2021-03-21 16:18:16,915 pool-1-thread-1 DEBUG OutputStream closed
+2021-03-21 16:18:16,915 pool-1-thread-1 DEBUG All asynchronous threads have terminated
+2021-03-21 16:18:16,916 pool-1-thread-1 DEBUG RollingFileManager shutdown completed with status true
+2021-03-21 16:18:16,916 pool-1-thread-1 DEBUG Shut down RollingFileManager logs/log4j2.log, all resources released: true
+2021-03-21 16:18:16,916 pool-1-thread-1 DEBUG Appender rollingFile stopped with status true
+2021-03-21 16:18:16,917 pool-1-thread-1 DEBUG Stopped XmlConfiguration[location=B:\EPAM\temp_task0\app\log4j2.xml] OK
+2021-03-21 16:18:16,917 pool-1-thread-1 DEBUG Stopped LoggerContext[name=659e0bfd, org.apache.logging.log4j.core.LoggerContext@4d5b6aac] with status true
+
+B:\EPAM\temp_task0\app>
