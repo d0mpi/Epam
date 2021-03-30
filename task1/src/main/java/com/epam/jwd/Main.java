@@ -24,7 +24,7 @@ public class Main {
                 new Triangle(1, 2, 3, 4, 5, 6)
         };
         Square[] squareArray = new Square[]{
-                new Square(3, 1, 6, 4, 0,4, 3, 7)
+                new Square(3, 1, 6, 4, 0,4, 3, 0)
         };
 
 
