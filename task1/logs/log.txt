@@ -1,9 +1,0 @@
-2021-03-31 00:48:02 [main] INFO  com.epam.jwd.Main- Point{x=4.98, y=0.0}
-2021-03-31 00:48:02 [main] INFO  com.epam.jwd.Main- Point{x=8.3, y=-3.5}
-2021-03-31 00:48:02 [main] INFO  com.epam.jwd.Main- Point{x=-5.4, y=2.0}
-2021-03-31 00:48:02 [main] INFO  com.epam.jwd.Main- Point{x=1.0, y=-17.0}
-2021-03-31 00:48:02 [main] INFO  com.epam.jwd.Main- Line{firstPoint=Point{x=1.0, y=2.0}, secondPoint=Point{x=3.0, y=4.0}}
-2021-03-31 00:48:02 [main] ERROR com.epam.jwd.Main- Объект Line{firstPoint=Point{x=1.0, y=-0.7}, secondPoint=Point{x=1.0, y=-0.7}} не является фигурой линия
-2021-03-31 00:48:02 [main] ERROR com.epam.jwd.Main- Объект Triangle{firstPoint=Point{x=1.0, y=2.0}, secondPoint=Point{x=1.0, y=2.0}, thirdPoint=Point{x=-0.3, y=2.4}} не является фигурой треугольник
-2021-03-31 00:48:02 [main] INFO  com.epam.jwd.Main- Triangle{firstPoint=Point{x=1.0, y=2.0}, secondPoint=Point{x=3.0, y=4.0}, thirdPoint=Point{x=5.0, y=6.0}}
-2021-03-31 00:48:02 [main] ERROR com.epam.jwd.Main- Объект Square{firstPoint=Point{x=3.0, y=1.0}, secondPoint=Point{x=6.0, y=4.0}, thirdPoint=Point{x=0.0, y=4.0}, fourthPoint=Point{x=3.0, y=0.0}} не является квадратом

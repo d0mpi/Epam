@@ -1,5 +1,9 @@
-package com.epam.jwd;
+package com.epam.jwd.app;
 
+import com.epam.jwd.model.Line;
+import com.epam.jwd.model.Point;
+import com.epam.jwd.model.Square;
+import com.epam.jwd.model.Triangle;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
