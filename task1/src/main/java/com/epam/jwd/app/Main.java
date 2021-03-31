@@ -1,9 +1,6 @@
 package com.epam.jwd.app;
 
-import com.epam.jwd.model.Line;
-import com.epam.jwd.model.Point;
-import com.epam.jwd.model.Square;
-import com.epam.jwd.model.Triangle;
+import com.epam.jwd.model.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -14,21 +11,21 @@ public class Main {
 
     public static void main(String[] args) {
         Point[] pointArray = new Point[]{
-                new Point(1, -17),
-                new Point(-5.4, 2),
-                new Point(8.3, -3.5),
-                new Point(4.98, 0)
+                FigureFactory.buildPoint(1, -17),
+                FigureFactory.buildPoint(-5.4, 2),
+                FigureFactory.buildPoint(8.3, -3.5),
+                FigureFactory.buildPoint(4.98, 0)
         };
         Line[] lineArray = new Line[]{
-                new Line(1, 2, 3, 4),
-                new Line(1, -0.7, 1, -0.7)
+                FigureFactory.buildLine(1, 2, 3, 4),
+                FigureFactory.buildLine(1, -0.7, 1, -0.7)
         };
         Triangle[] triangleArray = new Triangle[]{
-                new Triangle(1, 2, 1, 2, -0.3, 2.4),
-                new Triangle(1, 2, 3, 4, 5, 6)
+                FigureFactory.buildTriangle(1, 2, 1, 2, -0.3, 2.4),
+                FigureFactory.buildTriangle(1, 2, 3, 4, 5, 6)
         };
         Square[] squareArray = new Square[]{
-                new Square(3, 1, 6, 4, 0,4, 3, 0)
+                FigureFactory.buildSquare(3, 1, 6, 4, 0,4, 3, 0)
         };
 
 
