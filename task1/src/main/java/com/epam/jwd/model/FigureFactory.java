@@ -1,28 +1,36 @@
 package com.epam.jwd.model;
 
 public class FigureFactory {
+    private static FigureFactory instance;
 
     private FigureFactory() {
     }
 
-    public static Point buildPoint(double firstX, double firstY) {
+    public static FigureFactory getInstance() {
+        if (instance == null) {
+            instance = new FigureFactory();
+        }
+        return instance;
+    }
+
+    public  Point buildPoint(double firstX, double firstY) {
         return new Point(firstX, firstY);
     }
 
 
-    public static Line buildLine(double firstX, double firstY,
+    public  Line buildLine(double firstX, double firstY,
                                  double secondX, double secondY) {
         return new Line(firstX, firstY, secondX, secondY);
     }
 
 
-    public static Triangle buildTriangle(double firstX, double firstY,
+    public  Triangle buildTriangle(double firstX, double firstY,
                                          double secondX, double secondY,
                                          double thirdX, double thirdY) {
         return new Triangle(firstX, firstY, secondX, secondY, thirdX, thirdY);
     }
 
-    public static Square buildSquare(double firstX, double firstY,
+    public  Square buildSquare(double firstX, double firstY,
                                      double secondX, double secondY,
                                      double thirdX, double thirdY,
                                      double fourthX, double fourthY) {

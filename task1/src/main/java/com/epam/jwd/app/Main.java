@@ -10,22 +10,24 @@ public class Main {
 
 
     public static void main(String[] args) {
+        FigureFactory figureFactory = FigureFactory.getInstance();
+
         Point[] pointArray = new Point[]{
-                FigureFactory.buildPoint(1, -17),
-                FigureFactory.buildPoint(-5.4, 2),
-                FigureFactory.buildPoint(8.3, -3.5),
-                FigureFactory.buildPoint(4.98, 0)
+                figureFactory.buildPoint(1, -17),
+                figureFactory.buildPoint(-5.4, 2),
+                figureFactory.buildPoint(8.3, -3.5),
+                figureFactory.buildPoint(4.98, 0)
         };
         Line[] lineArray = new Line[]{
-                FigureFactory.buildLine(1, 2, 3, 4),
-                FigureFactory.buildLine(1, -0.7, 1, -0.7)
+                figureFactory.buildLine(1, 2, 3, 4),
+                figureFactory.buildLine(1, -0.7, 1, -0.7)
         };
         Triangle[] triangleArray = new Triangle[]{
-                FigureFactory.buildTriangle(1, 2, 1, 2, -0.3, 2.4),
-                FigureFactory.buildTriangle(1, 2, 3, 4, 5, 6)
+                figureFactory.buildTriangle(1, 2, 1, 2, -0.3, 2.4),
+                figureFactory.buildTriangle(1, 2, 3, 4, 5, 6)
         };
         Square[] squareArray = new Square[]{
-                FigureFactory.buildSquare(3, 1, 6, 4, 0,4, 3, 0)
+                figureFactory.buildSquare(3, 1, 6, 4, 0,4, 3, 0)
         };
 
 
