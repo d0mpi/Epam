@@ -1,9 +1,18 @@
-2021-03-31 19:44:48 [main] INFO  com.epam.jwd.app.Main- Point{x=4.98, y=0.0}
-2021-03-31 19:44:48 [main] INFO  com.epam.jwd.app.Main- Point{x=8.3, y=-3.5}
-2021-03-31 19:44:48 [main] INFO  com.epam.jwd.app.Main- Point{x=-5.4, y=2.0}
-2021-03-31 19:44:48 [main] INFO  com.epam.jwd.app.Main- Point{x=1.0, y=-17.0}
-2021-03-31 19:44:48 [main] INFO  com.epam.jwd.app.Main- Line{firstPoint=Point{x=1.0, y=2.0}, secondPoint=Point{x=3.0, y=4.0}}
-2021-03-31 19:44:48 [main] ERROR com.epam.jwd.app.Main- Объект Line{firstPoint=Point{x=1.0, y=-0.7}, secondPoint=Point{x=1.0, y=-0.7}} не является фигурой линия
-2021-03-31 19:44:48 [main] ERROR com.epam.jwd.app.Main- Объект Triangle{firstPoint=Point{x=1.0, y=2.0}, secondPoint=Point{x=1.0, y=2.0}, thirdPoint=Point{x=-0.3, y=2.4}} не является фигурой треугольник
-2021-03-31 19:44:48 [main] INFO  com.epam.jwd.app.Main- Triangle{firstPoint=Point{x=1.0, y=2.0}, secondPoint=Point{x=3.0, y=4.0}, thirdPoint=Point{x=5.0, y=6.0}}
-2021-03-31 19:44:48 [main] ERROR com.epam.jwd.app.Main- Объект Square{firstPoint=Point{x=3.0, y=1.0}, secondPoint=Point{x=6.0, y=4.0}, thirdPoint=Point{x=0.0, y=4.0}, fourthPoint=Point{x=3.0, y=0.0}} не является квадратом
+2021-04-21 18:50:21 [main] INFO  com.epam.jwd.Main- Point{x=4.98, y=0.0}
+2021-04-21 18:50:21 [main] INFO  com.epam.jwd.Main- Point{x=8.3, y=-3.5}
+2021-04-21 18:50:21 [main] INFO  com.epam.jwd.Main- Point{x=-5.4, y=2.0}
+2021-04-21 18:50:21 [main] INFO  com.epam.jwd.Main- Point{x=1.0, y=-17.0}
+2021-04-21 18:50:21 [main] INFO  com.epam.jwd.Main- Line{pointArray=[Point{x=1.0, y=2.0}, Point{x=3.0, y=4.0}]}
+2021-04-21 18:50:21 [main] INFO  com.epam.jwd.Main- Line{pointArray=[Point{x=1.54, y=2.89}, Point{x=3.0, y=-0.31}]}
+2021-04-21 18:50:21 [main] ERROR com.epam.jwd.Main- TRIANGLE Triangle{pointArray=[Point{x=1.0, y=2.0}, Point{x=1.0, y=-4.0}, Point{x=3.0, y=4.0}]}can not exist
+2021-04-21 18:50:21 [main] ERROR com.epam.jwd.Main- TRIANGLE Triangle{pointArray=[Point{x=1.54, y=2.89}, Point{x=1.54, y=0.0}, Point{x=3.0, y=-0.31}]}can not exist
+2021-04-21 18:50:21 [main] INFO  com.epam.jwd.Main- Square{pointArray=[Point{x=0.0, y=0.0}, Point{x=1.0, y=0.0}, Point{x=0.0, y=1.0}, Point{x=1.0, y=1.0}]}
+2021-04-21 18:53:30 [main] INFO  com.epam.jwd.Main- Point{x=4.98, y=0.0}
+2021-04-21 18:53:30 [main] INFO  com.epam.jwd.Main- Point{x=8.3, y=-3.5}
+2021-04-21 18:53:30 [main] INFO  com.epam.jwd.Main- Point{x=-5.4, y=2.0}
+2021-04-21 18:53:30 [main] INFO  com.epam.jwd.Main- Point{x=1.0, y=-17.0}
+2021-04-21 18:53:30 [main] INFO  com.epam.jwd.Main- Line{pointArray=[Point{x=1.0, y=2.0}, Point{x=3.0, y=4.0}]}
+2021-04-21 18:53:30 [main] INFO  com.epam.jwd.Main- Line{pointArray=[Point{x=1.54, y=2.89}, Point{x=3.0, y=-0.31}]}
+2021-04-21 18:53:30 [main] ERROR com.epam.jwd.Main- TRIANGLE Triangle{pointArray=[Point{x=1.0, y=2.0}, Point{x=1.0, y=-4.0}, Point{x=3.0, y=4.0}]}can not exist
+2021-04-21 18:53:30 [main] ERROR com.epam.jwd.Main- TRIANGLE Triangle{pointArray=[Point{x=1.54, y=2.89}, Point{x=1.54, y=0.0}, Point{x=3.0, y=-0.31}]}can not exist
+2021-04-21 18:53:30 [main] INFO  com.epam.jwd.Main- Square{pointArray=[Point{x=0.0, y=0.0}, Point{x=1.0, y=0.0}, Point{x=0.0, y=1.0}, Point{x=1.0, y=1.0}]}

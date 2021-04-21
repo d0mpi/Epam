@@ -1,22 +1,17 @@
 package com.epam.jwd.model;
 
+import java.util.Arrays;
 import java.util.Objects;
 
-public class Line implements ValidFigure {
-    private final Point firstPoint;
-    private final Point secondPoint;
+public class Line extends Figure implements ValidFigure {
+    private final Point[] pointArray;
 
-    public Line(double firstX, double firstY, double secondX, double secondY) {
-        this.firstPoint = new Point(firstX, firstY);
-        this.secondPoint = new Point(secondX, secondY);
+    public Line( Point[] pointArray) {
+            this.pointArray = pointArray;
     }
 
-    public Point getFirstPoint() {
-        return firstPoint;
-    }
-
-    public Point getSecondPoint() {
-        return secondPoint;
+    public Point[] getPointArray() {
+        return pointArray;
     }
 
     public static double length(Point firstPoint, Point secondPoint) {
@@ -29,19 +24,18 @@ public class Line implements ValidFigure {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Line line = (Line) o;
-        return Objects.equals(firstPoint, line.firstPoint) && Objects.equals(secondPoint, line.secondPoint);
+        return Arrays.equals(pointArray, line.pointArray);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstPoint, secondPoint);
+        return Arrays.hashCode(pointArray);
     }
 
     @Override
     public String toString() {
         return "Line{" +
-                "firstPoint=" + firstPoint +
-                ", secondPoint=" + secondPoint +
+                "pointArray=" + Arrays.toString(pointArray) +
                 '}';
     }
 
@@ -52,6 +46,11 @@ public class Line implements ValidFigure {
 
     @Override
     public boolean containSamePoints() {
-        return this.firstPoint.equals(this.secondPoint);
+        return Arrays.stream(pointArray).distinct().count() != pointArray.length;
+    }
+
+    @Override
+    public FigureType getFigureType() {
+        return FigureType.LINE;
     }
 }
