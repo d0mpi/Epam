@@ -1,0 +1,3 @@
+2021-03-21 16:18:16,906 INFO c.e.j.a.Main [main] Student: 123, name='Michael', university='BSU'
+2021-03-21 16:18:16,908 INFO c.e.j.a.Main [main] Student: 54984, name='Nikita', university='BSUIR'
+2021-03-21 16:18:16,908 INFO c.e.j.a.Main [main] Student: 268465, name='John', university='BNTU'
