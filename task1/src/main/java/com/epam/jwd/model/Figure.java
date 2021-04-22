@@ -2,16 +2,33 @@ package com.epam.jwd.model;
 
 import com.epam.jwd.strategy.FigureStrategy;
 
-public class Figure implements ValidFigure {
+public abstract class Figure implements ValidFigure {
     private FigureStrategy figurePropertiesStrategy;
-    private FigureType figureFactoryType;
+    private FigureType figureType;
+    private Integer id;
 
     public void setFigureStrategy(FigureStrategy figurePropertiesStrategy) {
         this.figurePropertiesStrategy = figurePropertiesStrategy;
     }
 
-    public FigureStrategy executeFigurePropertiesStrategy() {
+    public FigureStrategy getFigurePropertiesStrategy() {
         return figurePropertiesStrategy;
+    }
+
+    public void executeFigurePropertiesStrategy() {
+         figurePropertiesStrategy.calculate();
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void calculateProperties(){
+        figurePropertiesStrategy.calculate();
     }
 
     @Override
@@ -24,8 +41,5 @@ public class Figure implements ValidFigure {
         return false;
     }
 
-    @Override
-    public FigureType getFigureType() {
-        return null;
-    }
+    public abstract FigureType getFigureType();
 }

@@ -1,22 +1,21 @@
 package com.epam.jwd.model;
 
 import com.epam.jwd.exeption.FigureException;
-import com.epam.jwd.exeption.FigureNotExistException;
 import com.epam.jwd.factory.FigureFactory;
 import com.epam.jwd.service.impl.FigureExistencePostProcessor;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class MultiAngleFigureFactory implements FigureFactory {
+public class SimpleFigureFactory implements FigureFactory {
 
-    private static MultiAngleFigureFactory instance;
+    private static SimpleFigureFactory instance;
     public static final Logger logger = LogManager.getLogger();
 
-    private MultiAngleFigureFactory(){}
+    private SimpleFigureFactory(){}
 
-    public static MultiAngleFigureFactory getInstance(){
+    public static SimpleFigureFactory getInstance(){
         if(instance == null){
-            instance = new MultiAngleFigureFactory();
+            instance = new SimpleFigureFactory();
         }
         return instance;
     }

@@ -1,18 +1,36 @@
-2021-04-21 18:50:21 [main] INFO  com.epam.jwd.Main- Point{x=4.98, y=0.0}
-2021-04-21 18:50:21 [main] INFO  com.epam.jwd.Main- Point{x=8.3, y=-3.5}
-2021-04-21 18:50:21 [main] INFO  com.epam.jwd.Main- Point{x=-5.4, y=2.0}
-2021-04-21 18:50:21 [main] INFO  com.epam.jwd.Main- Point{x=1.0, y=-17.0}
-2021-04-21 18:50:21 [main] INFO  com.epam.jwd.Main- Line{pointArray=[Point{x=1.0, y=2.0}, Point{x=3.0, y=4.0}]}
-2021-04-21 18:50:21 [main] INFO  com.epam.jwd.Main- Line{pointArray=[Point{x=1.54, y=2.89}, Point{x=3.0, y=-0.31}]}
-2021-04-21 18:50:21 [main] ERROR com.epam.jwd.Main- TRIANGLE Triangle{pointArray=[Point{x=1.0, y=2.0}, Point{x=1.0, y=-4.0}, Point{x=3.0, y=4.0}]}can not exist
-2021-04-21 18:50:21 [main] ERROR com.epam.jwd.Main- TRIANGLE Triangle{pointArray=[Point{x=1.54, y=2.89}, Point{x=1.54, y=0.0}, Point{x=3.0, y=-0.31}]}can not exist
-2021-04-21 18:50:21 [main] INFO  com.epam.jwd.Main- Square{pointArray=[Point{x=0.0, y=0.0}, Point{x=1.0, y=0.0}, Point{x=0.0, y=1.0}, Point{x=1.0, y=1.0}]}
-2021-04-21 18:53:30 [main] INFO  com.epam.jwd.Main- Point{x=4.98, y=0.0}
-2021-04-21 18:53:30 [main] INFO  com.epam.jwd.Main- Point{x=8.3, y=-3.5}
-2021-04-21 18:53:30 [main] INFO  com.epam.jwd.Main- Point{x=-5.4, y=2.0}
-2021-04-21 18:53:30 [main] INFO  com.epam.jwd.Main- Point{x=1.0, y=-17.0}
-2021-04-21 18:53:30 [main] INFO  com.epam.jwd.Main- Line{pointArray=[Point{x=1.0, y=2.0}, Point{x=3.0, y=4.0}]}
-2021-04-21 18:53:30 [main] INFO  com.epam.jwd.Main- Line{pointArray=[Point{x=1.54, y=2.89}, Point{x=3.0, y=-0.31}]}
-2021-04-21 18:53:30 [main] ERROR com.epam.jwd.Main- TRIANGLE Triangle{pointArray=[Point{x=1.0, y=2.0}, Point{x=1.0, y=-4.0}, Point{x=3.0, y=4.0}]}can not exist
-2021-04-21 18:53:30 [main] ERROR com.epam.jwd.Main- TRIANGLE Triangle{pointArray=[Point{x=1.54, y=2.89}, Point{x=1.54, y=0.0}, Point{x=3.0, y=-0.31}]}can not exist
-2021-04-21 18:53:30 [main] INFO  com.epam.jwd.Main- Square{pointArray=[Point{x=0.0, y=0.0}, Point{x=1.0, y=0.0}, Point{x=0.0, y=1.0}, Point{x=1.0, y=1.0}]}
+2021-04-21 18:50:21 [main] INFO  com.epam.jwd.app.Main- Point{x=4.98, y=0.0}
+2021-04-21 18:50:21 [main] INFO  com.epam.jwd.app.Main- Point{x=8.3, y=-3.5}
+2021-04-21 18:50:21 [main] INFO  com.epam.jwd.app.Main- Point{x=-5.4, y=2.0}
+2021-04-21 18:50:21 [main] INFO  com.epam.jwd.app.Main- Point{x=1.0, y=-17.0}
+2021-04-21 18:50:21 [main] INFO  com.epam.jwd.app.Main- Line{pointArray=[Point{x=1.0, y=2.0}, Point{x=3.0, y=4.0}]}
+2021-04-21 18:50:21 [main] INFO  com.epam.jwd.app.Main- Line{pointArray=[Point{x=1.54, y=2.89}, Point{x=3.0, y=-0.31}]}
+2021-04-21 18:50:21 [main] ERROR com.epam.jwd.app.Main- TRIANGLE Triangle{pointArray=[Point{x=1.0, y=2.0}, Point{x=1.0, y=-4.0}, Point{x=3.0, y=4.0}]}can not exist
+2021-04-21 18:50:21 [main] ERROR com.epam.jwd.app.Main- TRIANGLE Triangle{pointArray=[Point{x=1.54, y=2.89}, Point{x=1.54, y=0.0}, Point{x=3.0, y=-0.31}]}can not exist
+2021-04-21 18:50:21 [main] INFO  com.epam.jwd.app.Main- Square{pointArray=[Point{x=0.0, y=0.0}, Point{x=1.0, y=0.0}, Point{x=0.0, y=1.0}, Point{x=1.0, y=1.0}]}
+2021-04-21 18:53:30 [main] INFO  com.epam.jwd.app.Main- Point{x=4.98, y=0.0}
+2021-04-21 18:53:30 [main] INFO  com.epam.jwd.app.Main- Point{x=8.3, y=-3.5}
+2021-04-21 18:53:30 [main] INFO  com.epam.jwd.app.Main- Point{x=-5.4, y=2.0}
+2021-04-21 18:53:30 [main] INFO  com.epam.jwd.app.Main- Point{x=1.0, y=-17.0}
+2021-04-21 18:53:30 [main] INFO  com.epam.jwd.app.Main- Line{pointArray=[Point{x=1.0, y=2.0}, Point{x=3.0, y=4.0}]}
+2021-04-21 18:53:30 [main] INFO  com.epam.jwd.app.Main- Line{pointArray=[Point{x=1.54, y=2.89}, Point{x=3.0, y=-0.31}]}
+2021-04-21 18:53:30 [main] ERROR com.epam.jwd.app.Main- TRIANGLE Triangle{pointArray=[Point{x=1.0, y=2.0}, Point{x=1.0, y=-4.0}, Point{x=3.0, y=4.0}]}can not exist
+2021-04-21 18:53:30 [main] ERROR com.epam.jwd.app.Main- TRIANGLE Triangle{pointArray=[Point{x=1.54, y=2.89}, Point{x=1.54, y=0.0}, Point{x=3.0, y=-0.31}]}can not exist
+2021-04-21 18:53:30 [main] INFO  com.epam.jwd.app.Main- Square{pointArray=[Point{x=0.0, y=0.0}, Point{x=1.0, y=0.0}, Point{x=0.0, y=1.0}, Point{x=1.0, y=1.0}]}
+2021-04-22 18:35:36 [main] INFO  com.epam.jwd.app.Main- Point{x=4.98, y=0.0}
+2021-04-22 18:35:36 [main] INFO  com.epam.jwd.app.Main- Point{x=8.3, y=-3.5}
+2021-04-22 18:35:36 [main] INFO  com.epam.jwd.app.Main- Point{x=-5.4, y=2.0}
+2021-04-22 18:35:36 [main] INFO  com.epam.jwd.app.Main- Point{x=1.0, y=-17.0}
+2021-04-22 18:35:36 [main] INFO  com.epam.jwd.app.Main- Line{pointArray=[Point{x=1.0, y=2.0}, Point{x=3.0, y=4.0}]}
+2021-04-22 18:35:36 [main] INFO  com.epam.jwd.app.Main- Line{pointArray=[Point{x=1.54, y=2.89}, Point{x=3.0, y=-0.31}]}
+2021-04-22 18:35:36 [main] ERROR com.epam.jwd.app.Main- TRIANGLE Triangle{pointArray=[Point{x=1.0, y=2.0}, Point{x=1.0, y=-4.0}, Point{x=3.0, y=4.0}]}can not exist
+2021-04-22 18:35:36 [main] ERROR com.epam.jwd.app.Main- TRIANGLE Triangle{pointArray=[Point{x=1.54, y=2.89}, Point{x=1.54, y=0.0}, Point{x=3.0, y=-0.31}]}can not exist
+2021-04-22 18:35:36 [main] INFO  com.epam.jwd.app.Main- Square{pointArray=[Point{x=0.0, y=0.0}, Point{x=1.0, y=0.0}, Point{x=0.0, y=1.0}, Point{x=1.0, y=1.0}]}
+2021-04-22 18:41:18 [main] INFO  com.epam.jwd.app.Main- Point{x=4.98, y=0.0}
+2021-04-22 18:41:18 [main] INFO  com.epam.jwd.app.Main- Point{x=8.3, y=-3.5}
+2021-04-22 18:41:18 [main] INFO  com.epam.jwd.app.Main- Point{x=-5.4, y=2.0}
+2021-04-22 18:41:18 [main] INFO  com.epam.jwd.app.Main- Point{x=1.0, y=-17.0}
+2021-04-22 18:41:18 [main] INFO  com.epam.jwd.app.Main- Line{pointArray=[Point{x=1.0, y=2.0}, Point{x=3.0, y=4.0}]}
+2021-04-22 18:41:18 [main] INFO  com.epam.jwd.app.Main- Line{pointArray=[Point{x=1.54, y=2.89}, Point{x=3.0, y=-0.31}]}
+2021-04-22 18:41:18 [main] ERROR com.epam.jwd.app.Main- TRIANGLE Triangle{pointArray=[Point{x=1.0, y=2.0}, Point{x=1.0, y=-4.0}, Point{x=3.0, y=4.0}]}can not exist
+2021-04-22 18:41:18 [main] ERROR com.epam.jwd.app.Main- TRIANGLE Triangle{pointArray=[Point{x=1.54, y=2.89}, Point{x=1.54, y=0.0}, Point{x=3.0, y=-0.31}]}can not exist
+2021-04-22 18:41:18 [main] INFO  com.epam.jwd.app.Main- Square{pointArray=[Point{x=0.0, y=0.0}, Point{x=1.0, y=0.0}, Point{x=0.0, y=1.0}, Point{x=1.0, y=1.0}]}

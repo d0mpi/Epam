@@ -1,9 +1,10 @@
-package com.epam.jwd.strategy;
+package com.epam.jwd.strategy.impl;
 
+import com.epam.jwd.strategy.FigureStrategy;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public enum SquarePerimeterStrategy implements FigureStrategy{
+public enum TrianglePropertiesStrategy implements FigureStrategy {
 
     //Enum singleton
     INSTANCE;
@@ -12,6 +13,6 @@ public enum SquarePerimeterStrategy implements FigureStrategy{
 
     @Override
     public void calculate() {
-        logger.info("Calculating square perimeter...");
+        logger.info("Calculating triangle properties...");
     }
 }

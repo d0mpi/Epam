@@ -1,5 +1,7 @@
-package com.epam.jwd;
+package com.epam.jwd.app;
 
+import com.epam.jwd.criteria.FigureCriteria;
+import com.epam.jwd.criteria.FigureCriteriaBuilder;
 import com.epam.jwd.exeption.FigureException;
 import com.epam.jwd.factory.FigureFactory;
 import com.epam.jwd.model.*;
@@ -8,14 +10,14 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class Main {
 
     public static final Logger logger = LogManager.getLogger();
 
-    private static LinkedList<Point> initializePointArray() {
-        return new LinkedList<>(Arrays.asList(
+    private static ArrayList<Point> initializePointArray() {
+        return new ArrayList<>(Arrays.asList(
                 new Point(1, -17),
                 new Point(-5.4, 2),
                 new Point(8.3, -3.5),
@@ -23,8 +25,8 @@ public class Main {
         ));
     }
 
-    private static LinkedList<Line> initializeLineArray(FigureFactory multiAngleFigureFactory) throws FigureException {
-        return new LinkedList<>(Arrays.asList(
+    private static ArrayList<Line> initializeLineArray(FigureFactory multiAngleFigureFactory) throws FigureException {
+        return new ArrayList<>(Arrays.asList(
                 (Line) multiAngleFigureFactory.createFigure(FigureType.LINE, new Point[]{
                         new Point(1, 2),
                         new Point(3, 4)}),
@@ -34,8 +36,8 @@ public class Main {
         ));
     }
 
-    private static LinkedList<Triangle> initializeTriangleArray(FigureFactory multiAngleFigureFactory) throws FigureException {
-        return new LinkedList<>(Arrays.asList(
+    private static ArrayList<Triangle> initializeTriangleArray(FigureFactory multiAngleFigureFactory) throws FigureException {
+        return new ArrayList<>(Arrays.asList(
                 (Triangle) multiAngleFigureFactory.createFigure(FigureType.TRIANGLE, new Point[]{
                         new Point(1, 2),
                         new Point(1, -4),
@@ -46,8 +48,8 @@ public class Main {
                         new Point(3, -0.31)})));
     }
 
-    private static LinkedList<Square> initializeSquareArray(FigureFactory multiAngleFigureFactory) throws FigureException {
-        return new LinkedList<>(Collections.singletonList(
+    private static ArrayList<Square> initializeSquareArray(FigureFactory multiAngleFigureFactory) throws FigureException {
+        return new ArrayList<>(Collections.singletonList(
                 (Square) multiAngleFigureFactory.createFigure(FigureType.SQUARE, new Point[]{
                         new Point(0, 0),
                         new Point(1, 0),
@@ -55,14 +57,14 @@ public class Main {
                         new Point(1, 1)})));
     }
 
-    private static void logPointArray(LinkedList<Point> points) {
+    private static void logPointArray(ArrayList<Point> points) {
         int i = points.size() - 1;
         do {
             logger.info(points.get(i).toString());
         } while (i-- > 0);
     }
 
-    private static void logFigureArray(LinkedList<? extends Figure> figures) {
+    private static void logFigureArray(ArrayList<? extends Figure> figures) {
         for (Figure figure : figures) {
             if (figure.containSamePoints()) {
                 logger.error("Object " + figure.toString() + " is not " + figure.getFigureType());
@@ -74,8 +76,8 @@ public class Main {
         }
     }
 
-    private static LinkedList<MultiAngleFigure> initializeMultiAngleFigure(FigureFactory multiAngleFigureFactory) throws FigureException {
-        return new LinkedList<>(Arrays.asList(
+    private static ArrayList<MultiAngleFigure> initializeMultiAngleFigure(FigureFactory multiAngleFigureFactory) throws FigureException {
+        return new ArrayList<>(Arrays.asList(
                 (MultiAngleFigure) multiAngleFigureFactory.createFigure(FigureType.MULTIANGLE, new Point[]{
                         new Point(1, 1),
                         new Point(1, 2),
@@ -93,19 +95,24 @@ public class Main {
     }
 
     public static void main(String[] args) throws FigureException {
-        FigureFactory multiAngleFigureFactory = MultiAngleFigureFactory.getInstance();
+        FigureFactory multiAngleFigureFactory = SimpleFigureFactory.getInstance();
 
-        LinkedList<Point> pointArray = initializePointArray();
-        LinkedList<Line> lineArray = initializeLineArray(multiAngleFigureFactory);
-        LinkedList<Triangle> triangleArray = initializeTriangleArray(multiAngleFigureFactory);
-        LinkedList<Square> squareArray = initializeSquareArray(multiAngleFigureFactory);
+        ArrayList<Point> pointArray = initializePointArray();
+        ArrayList<Line> lineArray = initializeLineArray(multiAngleFigureFactory);
+        ArrayList<Triangle> triangleArray = initializeTriangleArray(multiAngleFigureFactory);
+        ArrayList<Square> squareArray = initializeSquareArray(multiAngleFigureFactory);
 
         logPointArray(pointArray);
         logFigureArray(lineArray);
         logFigureArray(triangleArray);
         logFigureArray(squareArray);
 
-        LinkedList<MultiAngleFigure> multiAngleFigureArray = initializeMultiAngleFigure(multiAngleFigureFactory);
+        ArrayList<MultiAngleFigure> multiAngleFigureArray = initializeMultiAngleFigure(multiAngleFigureFactory);
 
+        FigureCriteriaBuilder figureCriteriaBuilder = new FigureCriteriaBuilder();
+        figureCriteriaBuilder.setFigureType(FigureType.LINE);
+        figureCriteriaBuilder.setId(1);
+
+        FigureCriteria figureCriteria = figureCriteriaBuilder.getResultCriteria();
     }
 }

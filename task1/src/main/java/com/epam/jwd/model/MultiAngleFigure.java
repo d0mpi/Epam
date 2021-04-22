@@ -5,8 +5,11 @@ import java.util.Arrays;
 public class MultiAngleFigure extends Figure implements ValidFigure{
     private Point[] pointArray;
 
-    public MultiAngleFigure(Point[] pointArray) {
-        this.pointArray = pointArray;
+    public MultiAngleFigure(Point[] points) {
+        if (points == null) {
+            throw new NullPointerException("Points array is null");
+        }
+        pointArray = points;
     }
 
     public Point[] getPointArray() {
